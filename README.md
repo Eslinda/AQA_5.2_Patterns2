@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ssb83tpxu8nouue7/branch/main?svg=true)](https://ci.appveyor.com/project/Eslinda/aqa-5-2-patterns2/branch/main)
