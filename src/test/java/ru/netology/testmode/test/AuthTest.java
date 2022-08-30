@@ -27,9 +27,6 @@ class AuthTest {
         $x("//input[@class='input__control'] [@name='password']").setValue(registeredUser.getPassword());
         $x("//button[@data-test-id='action-login']").click();
         $x("//div[@id='root']//h2").shouldHave(Condition.exactText("  Личный кабинет"));
-        // TODO: добавить логику теста, в рамках которого будет выполнена попытка входа в личный кабинет с учётными
-        //  данными зарегистрированного активного пользователя, для заполнения полей формы используйте
-        //  пользователя registeredUser
     }
 
     @Test
@@ -42,8 +39,6 @@ class AuthTest {
         $x("//button[@data-test-id='action-login']").click();
         $x("//div[@class='notification__content']")
                 .shouldHave(Condition.exactText("Ошибка! Неверно указан логин или пароль"));
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет
-        //  незарегистрированного пользователя, для заполнения полей формы используйте пользователя notRegisteredUser
     }
 
     @Test
@@ -56,8 +51,6 @@ class AuthTest {
         $x("//button[@data-test-id='action-login']").click();
         $x("//div[@class='notification__content']")
                 .shouldHave(Condition.exactText("Ошибка! Пользователь заблокирован"));
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет,
-        //  заблокированного пользователя, для заполнения полей формы используйте пользователя blockedUser
     }
 
     @Test
@@ -72,9 +65,6 @@ class AuthTest {
         $x("//div[@class='notification__content']")
                 .shouldHave(Condition.exactText("Ошибка! Неверно указан логин или пароль"));
         System.out.println();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  логином, для заполнения поля формы "Логин" используйте переменную wrongLogin,
-        //  "Пароль" - пользователя registeredUser
     }
 
     @Test
@@ -88,8 +78,5 @@ class AuthTest {
         $x("//button[@data-test-id='action-login']").click();
         $x("//div[@class='notification__content']")
                 .shouldHave(Condition.exactText("Ошибка! Неверно указан логин или пароль"));
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  паролем, для заполнения поля формы "Логин" используйте пользователя registeredUser,
-        //  "Пароль" - переменную wrongPassword
     }
 }
